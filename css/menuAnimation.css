@@ -10,7 +10,17 @@ body{
 	width: 100%;
 	height: 100%;
 	background-image: url('../images/menu_bg.png'); 
-	background-size: 100%;
+    background-size: cover;
+	left: 0px;
+}
+.menu_btn{
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.menu_btn img{
+	width: 30px;
+	height: 30px;
+	float: left;
 }
 .menu{
 	width: 280px;
