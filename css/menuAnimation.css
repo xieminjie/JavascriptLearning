@@ -7,11 +7,9 @@ body{
 	position: relative;
 }
 .main{
-	width: 100%;
 	height: 100%;
 	background-image: url('../images/menu_bg.png'); 
-    background-size: cover;
-	left: 0px;
+	background-size: cover;
 }
 .menu_btn{
 	padding-left: 20px;
@@ -23,9 +21,10 @@ body{
 	float: left;
 }
 .menu{
-	width: 280px;
+	width: 300px;
 	height: 100%;
-	left:-280px;
+	left:-300px;
 	position: fixed;
-	background-color:red;
+	background-color:black;
+	opacity:0.5;
 }
