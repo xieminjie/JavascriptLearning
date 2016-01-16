@@ -30,3 +30,8 @@ body{
 .col-lg-4{
 	text-align: center;
 }
+.col-md-1 p{
+	background-color: red;
+	display: inline-block;
+	
+}
