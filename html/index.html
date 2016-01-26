@@ -2,12 +2,38 @@
 <html>
     <head>
     	<link rel='stylesheet' type='text/css' href='../css/todolist.css'/>
-    	<link rel='stylesheet' type='text/css' href='../css/bootstrap.min.css'/>
+    	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     	<!-- Include the AngularJS library -->
-    	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
 	</head>
-	<body>
-
+	<body ng-app='store' ng-controller="StoreController as store">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="product in store.products">
+					<h2>{{product.name}}</h2>
+					<h3>{{product.price|currency}}</h3>
+					<p>{{product.description}}</p>
+					<section>
+						<ul class="nav nav-pills">
+							<li><a href ng-click='tab=1'>Description</a></li>
+							<li><a href ng-click='tab=2'>Specifications</a></li>
+							<li><a href ng-click='tab=3'>Review</a></li>
+						</ul>
+						<div class="panel" ng-show="tab===1"> 
+							<h4>Description</h4>  
+							<p>{{product.description}}</p> 
+						</div>
+						<div class="panel" ng-show="tab===2">
+							<h4>Specifications</h4> 
+							<p>None yet</p>  
+						</div>
+						<div class="panel" ng-show="tab===3"> 
+							<h4>Reviews</h4>  
+							<p>None yet</p> 
+						</div>
+					</section>
+				</li>
+			</ul>
 		 <!-- Modules -->
     	<script src="../scripts/app.js"></script>
 	</body>
