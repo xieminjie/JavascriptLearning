@@ -1,0 +1,17 @@
+*{
+	margin:0;
+	padding:0;
+}
+.slide{
+	width: 20em;
+	height: 20em;
+	margin-top: 10em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: gray;
+}
+.btn{
+	width: 200px;
+	height: 50px;
+	background-color: blue;
+}
